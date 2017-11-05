@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head><title>Python WebSocket</title></head>
+<style>
+   @import url(http://fonts.googleapis.com/css?family=Old+Standard+TT:400,700);
+   [data-notify="container"][class*="alert-pastel-"] {
+       background-color: rgb(255, 255, 238);
+       border-width: 0px;
+       border-left: 15px solid rgb(255, 240, 106);
+       border-radius: 0px;
+       box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.3);
+       font-family: 'Old Standard TT', serif;
+       letter-spacing: 1px;
+   }
+   [data-notify="container"].alert-pastel-info {
+       border-left-color: rgb(119, 158, 203);
+   }
+   [data-notify="container"].alert-pastel-danger {
+       border-left-color: rgb(255, 103, 76);
+   }
+   [data-notify="container"][class*="alert-pastel-"] > [data-notify="title"] {
+       color: rgb(80, 80, 57);
+       display: block;
+       font-weight: 700;
+       margin-bottom: 5px;
+   }
+   [data-notify="container"][class*="alert-pastel-"] > [data-notify="message"] {
+       font-weight: 400;
+   }
+</style>
+<body>
+    <h1>Anonymous Chat here!</h1>
+    <form method="post" action="#" id="messageForm">
+        <label>Short Message</label>
+        <input type="text" id="message"></input>
+        <input type="submit" value="Submit"></input>
+    </form>
+    <div id="messages"></div>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.5/socket.io.min.js"></script>
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+    <link href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <script type = "text/javascript" src = "{{ url_for('static', filename = 'js/jquery-1.12.0.min.js') }}" ></script>
+    <script type = "text/javascript" src = "{{ url_for('static', filename = 'js/bootstrap-notify.js') }}" ></script>
+        
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var url = "http://" + document.domain + ":" + location.port;
+            //open the socket connection
+            var socket = io.connect(url + "/dd");//add the namespace
+            
+            // when the user submits, emit/send a message to server
+            $("#messageForm").submit(function(event) {
+                socket.emit('go-message', {
+                            'message': $('#message').val(),
+                            });
+                $('#message').val('');
+                return false;
+            });
+            //when a message has been received prepend(append at top)
+            socket.on('go-message', function(data) {
+                $("#messages").prepend('<h3>' + data.content.message + '<h3>');
+                    //used notify.js
+                    $.notify({
+                        title: 'Hey! :)',
+                        message: data.content.message
+                    },{
+                        type: 'pastel-info',
+                        delay: 5000,
+                        template: '<div data-notify="container" class="col-xs-11 col-sm-3 alert alert-{0}" role="alert">' +
+                            '<span data-notify="title">{1}</span>' +
+                            '<span data-notify="message">{2}</span>' +
+                        '</div>'
+                    });//notify
+                });//socketio.on
+        });//document ready
+
+    </script>
+</body>
+</html>
