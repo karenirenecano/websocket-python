@@ -28,3 +28,8 @@ I have added a css/js plugin to see the feel of "real" time notification and rem
 | JQuery | jquery-1.12.0.min.js |
 
 
+### Deployment
+
+I have included the apache-pychat.conf to proxy pass the requests coming from localhost:5000(your python script) to be redirected to localhost. A shell script : gunicornstart.sh has also been added to run gunicorn at the background and restart using supervisorctl should the app stop.
+
+Happy Coding! :)

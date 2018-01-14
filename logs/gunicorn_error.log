@@ -1,0 +1,271 @@
+[2018-01-13 21:06:57 +0800] [1947] [INFO] Starting gunicorn 19.7.1
+[2018-01-13 21:06:57 +0800] [1947] [INFO] Listening at: http://0.0.0.0:5000 (1947)
+[2018-01-13 21:06:57 +0800] [1947] [INFO] Using worker: sync
+[2018-01-13 21:06:57 +0800] [1950] [INFO] Booting worker with pid: 1950
+[2018-01-13 21:07:22 +0800] [1947] [INFO] Handling signal: int
+[2018-01-13 21:07:23 +0800] [1950] [INFO] Worker exiting (pid: 1950)
+[2018-01-13 21:07:23 +0800] [1947] [INFO] Shutting down: Master
+[2018-01-13 21:47:12 +0800] [2367] [INFO] Starting gunicorn 19.7.1
+[2018-01-13 21:47:12 +0800] [2367] [INFO] Listening at: http://0.0.0.0:5000 (2367)
+[2018-01-13 21:47:12 +0800] [2367] [INFO] Using worker: sync
+[2018-01-13 21:47:12 +0800] [2370] [INFO] Booting worker with pid: 2370
+[2018-01-13 21:47:43 +0800] [2367] [CRITICAL] WORKER TIMEOUT (pid:2370)
+[2018-01-13 21:47:43 +0800] [2370] [INFO] Worker exiting (pid: 2370)
+[2018-01-13 21:47:43 +0800] [2372] [INFO] Booting worker with pid: 2372
+[2018-01-13 21:48:12 +0800] [2367] [INFO] Handling signal: int
+[2018-01-13 21:48:13 +0800] [2372] [ERROR] Error handling request /socket.io/?EIO=3&transport=polling&t=M3lnhGM&sid=45660c76650149acb8dfbaefa5d34936
+Traceback (most recent call last):
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/flask/app.py", line 2000, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 37, in __call__
+    start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/socketio/server.py", line 360, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/engineio/server.py", line 274, in handle_request
+    environ, start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/engineio/socket.py", line 93, in handle_get_request
+    packets = self.poll()
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/engineio/socket.py", line 31, in poll
+    packets = [self.queue.get(timeout=self.server.ping_timeout)]
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gevent/queue.py", line 283, in get
+    return self.__get_or_peek(self._get, block, timeout)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gevent/queue.py", line 260, in __get_or_peek
+    result = waiter.get()
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gevent/hub.py", line 898, in get
+    return self.hub.switch()
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gevent/hub.py", line 630, in switch
+    return RawGreenlet.switch(self)
+gevent.hub.BlockingSwitchOutError: Impossible to call blocking function in the event loop callback
+[2018-01-13 21:48:13 +0800] [2372] [INFO] Worker exiting (pid: 2372)
+[2018-01-13 21:48:14 +0800] [2367] [INFO] Shutting down: Master
+[2018-01-13 21:48:24 +0800] [2377] [INFO] Starting gunicorn 19.7.1
+[2018-01-13 21:48:24 +0800] [2377] [INFO] Listening at: http://127.0.0.1:5000 (2377)
+[2018-01-13 21:48:24 +0800] [2377] [INFO] Using worker: sync
+[2018-01-13 21:48:24 +0800] [2380] [INFO] Booting worker with pid: 2380
+[2018-01-13 21:48:59 +0800] [2377] [CRITICAL] WORKER TIMEOUT (pid:2380)
+[2018-01-13 21:48:59 +0800] [2380] [INFO] Worker exiting (pid: 2380)
+[2018-01-13 21:48:59 +0800] [2393] [INFO] Booting worker with pid: 2393
+[2018-01-13 21:49:30 +0800] [2377] [CRITICAL] WORKER TIMEOUT (pid:2393)
+[2018-01-13 21:49:30 +0800] [2393] [INFO] Worker exiting (pid: 2393)
+[2018-01-13 21:49:30 +0800] [2395] [INFO] Booting worker with pid: 2395
+[2018-01-13 21:49:39 +0800] [2377] [INFO] Handling signal: int
+[2018-01-13 21:49:40 +0800] [2395] [ERROR] Error handling request /socket.io/?EIO=3&transport=polling&t=M3lo5CE&sid=8cbf50c4f69041b79cba17a2e332fa00
+Traceback (most recent call last):
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/flask/app.py", line 2000, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 37, in __call__
+    start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/socketio/server.py", line 360, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/engineio/server.py", line 274, in handle_request
+    environ, start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/engineio/socket.py", line 93, in handle_get_request
+    packets = self.poll()
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/engineio/socket.py", line 31, in poll
+    packets = [self.queue.get(timeout=self.server.ping_timeout)]
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gevent/queue.py", line 283, in get
+    return self.__get_or_peek(self._get, block, timeout)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gevent/queue.py", line 260, in __get_or_peek
+    result = waiter.get()
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gevent/hub.py", line 898, in get
+    return self.hub.switch()
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gevent/hub.py", line 630, in switch
+    return RawGreenlet.switch(self)
+gevent.hub.BlockingSwitchOutError: Impossible to call blocking function in the event loop callback
+[2018-01-13 21:49:40 +0800] [2395] [INFO] Worker exiting (pid: 2395)
+[2018-01-13 21:49:40 +0800] [2377] [INFO] Shutting down: Master
+[2018-01-13 21:51:10 +0800] [2399] [INFO] Starting gunicorn 19.7.1
+[2018-01-13 21:51:10 +0800] [2399] [INFO] Listening at: http://127.0.0.1:5000 (2399)
+[2018-01-13 21:51:10 +0800] [2399] [INFO] Using worker: sync
+[2018-01-13 21:51:10 +0800] [2402] [INFO] Booting worker with pid: 2402
+[2018-01-13 21:51:37 +0800] [2399] [INFO] Handling signal: int
+[2018-01-13 21:51:38 +0800] [2402] [ERROR] Error handling request /socket.io/?EIO=3&transport=polling&t=M3loTVE&sid=e2558a8f25444180b84a8d484f87b00f
+Traceback (most recent call last):
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/flask/app.py", line 2000, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 37, in __call__
+    start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/socketio/server.py", line 360, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/engineio/server.py", line 274, in handle_request
+    environ, start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/engineio/socket.py", line 93, in handle_get_request
+    packets = self.poll()
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/engineio/socket.py", line 31, in poll
+    packets = [self.queue.get(timeout=self.server.ping_timeout)]
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gevent/queue.py", line 283, in get
+    return self.__get_or_peek(self._get, block, timeout)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gevent/queue.py", line 260, in __get_or_peek
+    result = waiter.get()
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gevent/hub.py", line 898, in get
+    return self.hub.switch()
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gevent/hub.py", line 630, in switch
+    return RawGreenlet.switch(self)
+gevent.hub.BlockingSwitchOutError: Impossible to call blocking function in the event loop callback
+[2018-01-13 21:51:38 +0800] [2402] [INFO] Worker exiting (pid: 2402)
+[2018-01-13 21:51:38 +0800] [2399] [INFO] Shutting down: Master
+[2018-01-13 21:52:39 +0800] [2407] [INFO] Starting gunicorn 19.7.1
+[2018-01-13 21:52:39 +0800] [2407] [INFO] Listening at: http://0.0.0.0:5000 (2407)
+[2018-01-13 21:52:39 +0800] [2407] [INFO] Using worker: sync
+[2018-01-13 21:52:39 +0800] [2410] [INFO] Booting worker with pid: 2410
+[2018-01-13 21:52:57 +0800] [2407] [INFO] Handling signal: int
+[2018-01-13 21:52:57 +0800] [2410] [INFO] Worker exiting (pid: 2410)
+[2018-01-13 21:52:58 +0800] [2407] [INFO] Shutting down: Master
+[2018-01-13 21:54:25 +0800] [2416] [INFO] Starting gunicorn 19.7.1
+[2018-01-13 21:54:25 +0800] [2416] [INFO] Listening at: http://0.0.0.0:5000 (2416)
+[2018-01-13 21:54:25 +0800] [2416] [INFO] Using worker: sync
+[2018-01-13 21:54:25 +0800] [2419] [INFO] Booting worker with pid: 2419
+[2018-01-13 21:55:18 +0800] [2416] [CRITICAL] WORKER TIMEOUT (pid:2419)
+[2018-01-13 21:55:18 +0800] [2419] [INFO] Worker exiting (pid: 2419)
+[2018-01-13 21:55:18 +0800] [2421] [INFO] Booting worker with pid: 2421
+[2018-01-13 21:55:22 +0800] [2416] [INFO] Handling signal: int
+[2018-01-13 21:55:23 +0800] [2421] [ERROR] Error handling request /socket.io/?EIO=3&transport=polling&t=M3lpQ1x&sid=45a32c438a5b4dafb413c5d8756c94d5
+Traceback (most recent call last):
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/flask/app.py", line 2000, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/flask_socketio/__init__.py", line 37, in __call__
+    start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/engineio/middleware.py", line 47, in __call__
+    return self.engineio_app.handle_request(environ, start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/socketio/server.py", line 360, in handle_request
+    return self.eio.handle_request(environ, start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/engineio/server.py", line 274, in handle_request
+    environ, start_response)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/engineio/socket.py", line 93, in handle_get_request
+    packets = self.poll()
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/engineio/socket.py", line 31, in poll
+    packets = [self.queue.get(timeout=self.server.ping_timeout)]
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gevent/queue.py", line 283, in get
+    return self.__get_or_peek(self._get, block, timeout)
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gevent/queue.py", line 260, in __get_or_peek
+    result = waiter.get()
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gevent/hub.py", line 898, in get
+    return self.hub.switch()
+  File "/mnt/c/python-projects/websocket-python/venv/lib/python3.5/site-packages/gevent/hub.py", line 630, in switch
+    return RawGreenlet.switch(self)
+gevent.hub.BlockingSwitchOutError: Impossible to call blocking function in the event loop callback
+[2018-01-13 21:55:23 +0800] [2421] [INFO] Worker exiting (pid: 2421)
+[2018-01-13 21:55:23 +0800] [2416] [INFO] Shutting down: Master
+[2018-01-13 22:02:42 +0800] [2434] [INFO] Starting gunicorn 19.7.1
+[2018-01-13 22:02:42 +0800] [2434] [INFO] Listening at: http://0.0.0.0:5000 (2434)
+[2018-01-13 22:02:42 +0800] [2434] [INFO] Using worker: gevent
+[2018-01-13 22:02:42 +0800] [2437] [INFO] Booting worker with pid: 2437
+[2018-01-13 22:03:05 +0800] [2434] [INFO] Handling signal: int
+[2018-01-13 22:03:05 +0800] [2437] [INFO] Worker exiting (pid: 2437)
+[2018-01-13 22:03:05 +0800] [2434] [INFO] Shutting down: Master
+supervisor: couldn't exec /home/flaskappuser/flaskapp/gunicornstart.sh: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/flaskappuser/flaskapp/gunicornstart.sh: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/flaskappuser/flaskapp/gunicornstart.sh: EACCES
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/flaskappuser/flaskapp/gunicornstart.sh: EACCES
+supervisor: child process was not spawned
+/home/flaskappuser/flaskapp/gunicornstart.sh: 2: /home/flaskappuser/flaskapp/gunicornstart.sh: source: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 3: /home/flaskappuser/flaskapp/gunicornstart.sh: gunicorn: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 2: /home/flaskappuser/flaskapp/gunicornstart.sh: source: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 3: /home/flaskappuser/flaskapp/gunicornstart.sh: gunicorn: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 2: /home/flaskappuser/flaskapp/gunicornstart.sh: source: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 3: /home/flaskappuser/flaskapp/gunicornstart.sh: gunicorn: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 2: /home/flaskappuser/flaskapp/gunicornstart.sh: source: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 3: /home/flaskappuser/flaskapp/gunicornstart.sh: gunicorn: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 2: /home/flaskappuser/flaskapp/gunicornstart.sh: source: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 3: /home/flaskappuser/flaskapp/gunicornstart.sh: gunicorn: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 3: /home/flaskappuser/flaskapp/gunicornstart.sh: source: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 4: /home/flaskappuser/flaskapp/gunicornstart.sh: gunicorn: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 3: /home/flaskappuser/flaskapp/gunicornstart.sh: source: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 4: /home/flaskappuser/flaskapp/gunicornstart.sh: gunicorn: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 3: /home/flaskappuser/flaskapp/gunicornstart.sh: source: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 4: /home/flaskappuser/flaskapp/gunicornstart.sh: gunicorn: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 3: /home/flaskappuser/flaskapp/gunicornstart.sh: source: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 4: /home/flaskappuser/flaskapp/gunicornstart.sh: gunicorn: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 3: /home/flaskappuser/flaskapp/gunicornstart.sh: source: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 4: /home/flaskappuser/flaskapp/gunicornstart.sh: gunicorn: not found
+/home/flaskappuser/flaskapp/gunicornstart.sh: 3: /home/flaskappuser/flaskapp/gunicornstart.sh: source: not found
+
+Error: class uri 'gevent' invalid or not found: 
+
+[Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 143, in load_class
+    mod = import_module('.'.join(components))
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/ggevent.py", line 22, in <module>
+    raise RuntimeError("You need gevent installed to use this worker.")
+RuntimeError: You need gevent installed to use this worker.
+]
+
+/home/flaskappuser/flaskapp/gunicornstart.sh: 3: /home/flaskappuser/flaskapp/gunicornstart.sh: source: not found
+
+Error: class uri 'gevent' invalid or not found: 
+
+[Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 143, in load_class
+    mod = import_module('.'.join(components))
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/ggevent.py", line 22, in <module>
+    raise RuntimeError("You need gevent installed to use this worker.")
+RuntimeError: You need gevent installed to use this worker.
+]
+
+/home/flaskappuser/flaskapp/gunicornstart.sh: 3: /home/flaskappuser/flaskapp/gunicornstart.sh: source: not found
+
+Error: class uri 'gevent' invalid or not found: 
+
+[Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 143, in load_class
+    mod = import_module('.'.join(components))
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/ggevent.py", line 22, in <module>
+    raise RuntimeError("You need gevent installed to use this worker.")
+RuntimeError: You need gevent installed to use this worker.
+]
+
+/home/flaskappuser/flaskapp/gunicornstart.sh: 3: /home/flaskappuser/flaskapp/gunicornstart.sh: source: not found
+
+Error: class uri 'gevent' invalid or not found: 
+
+[Traceback (most recent call last):
+  File "/usr/lib/python2.7/dist-packages/gunicorn/util.py", line 143, in load_class
+    mod = import_module('.'.join(components))
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/usr/lib/python2.7/dist-packages/gunicorn/workers/ggevent.py", line 22, in <module>
+    raise RuntimeError("You need gevent installed to use this worker.")
+RuntimeError: You need gevent installed to use this worker.
+]
+
+/home/flaskappuser/flaskapp/gunicornstart.sh: 3: /home/flaskappuser/flaskapp/gunicornstart.sh: source: not found
+[2018-01-14 10:31:35 +0000] [160] [INFO] Starting gunicorn 19.4.5
+[2018-01-14 10:31:35 +0000] [160] [INFO] Listening at: http://0.0.0.0:5000 (160)
+[2018-01-14 10:31:35 +0000] [160] [INFO] Using worker: gevent
+[2018-01-14 10:31:35 +0000] [165] [INFO] Booting worker with pid: 165
+/home/flaskappuser/flaskapp/gunicornstart.sh: 3: /home/flaskappuser/flaskapp/gunicornstart.sh: source: not found
+[2018-01-14 10:37:01 +0000] [191] [INFO] Starting gunicorn 19.4.5
+[2018-01-14 10:37:01 +0000] [191] [INFO] Listening at: http://0.0.0.0:5000 (191)
+[2018-01-14 10:37:01 +0000] [191] [INFO] Using worker: gevent
+[2018-01-14 10:37:01 +0000] [196] [INFO] Booting worker with pid: 196
