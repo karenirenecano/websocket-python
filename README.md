@@ -30,6 +30,6 @@ I have added a css/js plugin to see the feel of "real" time notification and rem
 
 ### Deployment
 
-I have included the apache-pychat.conf to proxy pass the requests coming from localhost:5000(your python script) to be redirected to localhost. A shell script : gunicornstart.sh has also been added to run gunicorn at the background and restart using supervisorctl should the app stop.
+I have included the [apache-pychat.conf](https://github.com/karenirenecano/websocket-python/blob/master/apache-pychat.conf) to proxy pass the requests coming from localhost:5000(your python script) to be redirected to localhost. A shell script : [gunicornstart.sh](https://github.com/karenirenecano/websocket-python/blob/master/gunicornstart.sh) has also been added to run gunicorn at the background and restart using [supervisorctl](https://github.com/karenirenecano/websocket-python/blob/gunicornDeployment/supervisor.conf) should the app stop.
 
 Happy Coding! :)
