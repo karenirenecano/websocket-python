@@ -64,11 +64,11 @@
             //when a message has been received prepend(append at top)
             socket.on('go-message', function(data) {
                 console.log(data);
-                $("#messages").prepend('<h3>' + data.content.message + '<h3>');
+                $("#messages").prepend('<h3>You : ' + data.content.message + '<h3>' + 'CommudeBot : ' + data.content["chat-response"]+ '<br>');
                     //used notify.js
                     $.notify({
                         title: 'Hey! :)',
-                        message: data.content.message + ':::' + data.content["chat-response"]
+                        message: 'CommudeBot :::' + data.content["chat-response"]
                     },{
                         type: 'pastel-info',
                         delay: 5000,
