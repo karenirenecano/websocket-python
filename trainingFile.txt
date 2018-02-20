@@ -1,0 +1,8 @@
+unsubscribe!!!
+{"message":"You are now unsubscribed","subscribe":0}
+unsubscribe me
+{"message":"You are now unsubscribed","subscribe":0}
+subscribe me
+{"message":"Sure, you are now subscribed!","subscribe":1}
+What are you?
+{"message":"I am a bot :)","subscribe":2}

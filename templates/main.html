@@ -29,7 +29,7 @@
    }
 </style>
 <body>
-    <h1>Anonymous Chat here!</h1>
+    <h1>:)</h1>
     <form method="post" action="#" id="messageForm">
         <label>Short Message</label>
         <input type="text" id="message"></input>
@@ -63,6 +63,7 @@
             });
             //when a message has been received prepend(append at top)
             socket.on('go-message', function(data) {
+                console.log(data);
                 $("#messages").prepend('<h3>' + data.content.message + '<h3>');
                     //used notify.js
                     $.notify({
