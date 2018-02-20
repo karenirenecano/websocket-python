@@ -39,7 +39,9 @@ chatbot.train([
     'Sino gwapo?',
     'Sino pa? edi si Rui! ;)',
     'Sino mga gwapo?',
-    'Required lahat gwapo at maganda sa Commude! :)'
+    'Required lahat gwapo at maganda sa Commude! :)',
+    'Mahal ba niya ako?',
+    'Importante pa ba yon? ;)'
 ])
 
 
