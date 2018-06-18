@@ -5,7 +5,7 @@ This is a simple websocket demo code adapted from [Matt Makai's](https://github.
 
 ### Installation
 
-Make sure you have Python installed.
+Make sure you have Python installed. I recommend using Anaconda and then install virtualenv.
 
 Create a virtualenv
 On Windows

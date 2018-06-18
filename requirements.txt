@@ -2,3 +2,4 @@ Flask==0.11.0
 Flask-SocketIO==2.4.0
 gevent
 gunicorn
+chatterbot
