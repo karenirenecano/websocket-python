@@ -29,7 +29,7 @@
    }
 </style>
 <body>
-    <h1>Anonymous Chat here!</h1>
+    <h1>:)</h1>
     <form method="post" action="#" id="messageForm">
         <label>Short Message</label>
         <input type="text" id="message"></input>
@@ -63,11 +63,12 @@
             });
             //when a message has been received prepend(append at top)
             socket.on('go-message', function(data) {
-                $("#messages").prepend('<h3>' + data.content.message + '<h3>');
+                console.log(data);
+                $("#messages").prepend('<h3>You : ' + data.content.message + '<h3>' + 'CommudeBot : ' + data.content["chat-response"]+ '<br>');
                     //used notify.js
                     $.notify({
                         title: 'Hey! :)',
-                        message: data.content.message
+                        message: 'CommudeBot :::' + data.content["chat-response"]
                     },{
                         type: 'pastel-info',
                         delay: 5000,
@@ -80,5 +81,7 @@
         });//document ready
 
     </script>
+<footer>find the source code <a href="https://github.com/karenirenecano/websocket-python">here</a></footer>
+
 </body>
 </html>
