@@ -3,3 +3,4 @@ Flask-SocketIO==2.4.0
 gevent
 gunicorn
 chatterbot
+pymongo
